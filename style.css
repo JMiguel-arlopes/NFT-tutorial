@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --color-main: #f5f5f5;
+    --secundary: rgba(245, 81, 213, 255);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.alphacoders.com/120/1203522.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding: 2rem 5rem;
+    color: white;
+    text-shadow:
+        0 0 5px white,
+        0 0 10px white,
+
+        0 0 10px black,
+        0 0 10px blue,
+        0 0 20px green;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner div {
+    max-width: 50%;
+}
+
+.banner h4 {
+    color: #111;
+}
+
+.banner p {
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.banner img {
+    height: 300px;
+    animation: logo 8s infinite reverse ease-in-out;
+}
+
+.banner a {
+    display: inline-block;
+    text-decoration: none;
+    color: #111;
+    font-weight: 800;
+    margin-top: 1px;
+    padding: 10px 20px;
+    background-color: green;
+    box-shadow: 0 0 3px green;
+    border-radius: 100px;
+    border: 1px solid black;
+}
+
+@keyframes logo {
+
+    0%,
+    100% {
+        transform: translateY(20px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+.step {
+    padding: 1rem 1.5rem;
+    background-color: var(--color-main);
+}
+
+.content {
+    display: flex;
+}
+
+.step a {
+    font-size: 18px;
+    /* text-decoration: none; */
+    font-weight: 600;
+    color: blue;
+    transition: .32s;
+}
+
+.step a:hover {
+    text-decoration: none;
+    color: rgb(106, 0, 255);
+    border-bottom: 1px solid rgb(106, 0, 255);
+}
+
+.step:nth-of-type(even) {
+    background-color: var(--secundary);
+}
+
+.step>p {
+    color: #222;
+}
+
+.step h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.step ol {
+    padding: 0 20px 0 40px;
+}
+
+.step p {
+    font-size: 16px;
+}
+
+.step p span {
+    color: rgb(180, 0, 0);
+    font-weight: 600
+}
+
+.content>img {
+    max-width: 25%;
+}
+
+.lista {
+    margin: 2rem 0 1rem;
+}
+
+.lista li {
+    margin-bottom: .75em;
+}
+
+.lista li img {
+    margin-top: 10px;
+    width: 100%;
+}
+
+h5 {
+    margin-top: 10px;
+}
+
+pre {
+    padding: 5px;
+    background-color: #111;
+    color: white;
+}
+
+code {
+    max-width: 100%;
+    flex-wrap: wrap;
+    white-space: break-spaces;
+}
+
+footer {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #111;
+    color: #cbcbcb;
+    padding: .25rem 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 427px) {
+    .banner {
+        padding: 1rem;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .banner div {
+        max-width: 100%;
+    }
+
+    .banner a {
+        margin-top: 10px;
+        padding: 10px 30px;
+    }
+
+    .banner img {
+        text-align: center;
+    }
+
+    .step {
+        padding: 1rem;
+        background-color: var(--color-main);
+    }
+
+    .step p {
+        font-weight: 600;
+    }
+
+    .step ol {
+        margin: 0;
+        padding: 1.2rem .5rem;
+    }
+
+    .content>img {
+        max-width: 100%;
+    }
+
+
+    .content {
+        flex-direction: column;
+    }
+
+
+}

@@ -7,6 +7,7 @@
     <title>Faça sua NFT - CBZ</title>
 
     <link rel="stylesheet" href="style.css">
+    <script defer src="https://kit.fontawesome.com/bd92ca8629.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -20,7 +21,8 @@
                     para a criação de NFTs. Aprenda passo a passo. Irei tentar mostrar a você a fazer da maneira mais
                     tranquila para o lançamento. Junte-se à revolução dos NFTs agora!</p>
                 <h4>Em caso de dúvidas:</h4>
-                <a href="https://wa.me/5521975471418" target="_blank">Fale comigo</a>
+                <a href="https://wa.me/5521975471418" target="_blank"><i class="fa-brands fa-whatsapp"></i>Fale
+                    comigo</a>
             </div>
 
             <div>
@@ -31,12 +33,17 @@
         <section class="container">
 
             <div class="step">
-                <h2>1 Passo:<br>- OpenZeppelin -</h2>
+                <h2>1° Passo:<br>
+                    <i class="fa-brands fa-connectdevelop"></i>
+                    OpenZeppelin
+                    <i class="fa-brands fa-connectdevelop"></i>
+                </h2>
                 <p>Antes de tudo, precisamos criar nosso Smart Contract.</p>
                 <div class="content">
                     <ol class="lista">
                         <li class="item">
-                            <p>Abra o <a href="#" target="_blank">OpenZeppelin</a></p>
+                            <p>Abra o <a href="https://www.openzeppelin.com/contracts" target="_blank">OpenZeppelin</a>
+                            </p>
                         </li>
                         <li class="item">
                             <p>Escolha a opção de <span>Token ERC721</span> (Essa opção é a que utilizamos para criação
@@ -70,26 +77,31 @@
             </div>
 
             <div class="step">
-                <h2>2° Passo:<br>- Alterando Código (REMIX) -</h2>
+                <h2>2° Passo:<br>
+                    <i class="fa-brands fa-connectdevelop"></i>
+                    Alterando Código (REMIX)
+                    <i class="fa-brands fa-connectdevelop"></i>
+                </h2>
 
                 <h6 style="font-size: 18px; color: #222;">
                     Com nosso código pronto, podemos fazer algumas observações:
                 </h6>
                 <p style="color: #222;">
-                    Esse contrato possui muitas que vão um pouco além do que queremos agora, o que faz
-                    alguns trechos de código ficarem serem desnecessários nessa demanda.
+                    Esse contrato possui muitas informações que vão um pouco além do que queremos agora, o que faz
+                    alguns trechos de código ficarem serem desnecessários perante essa demanda.
                 </p>
                 <div class="content">
                     <ol class="lista">
                         <li class="item">
                             <p>
                                 Peço que deixem no código apenas a função <span>"safeMint"</span>, enquanto as outras
-                                funções abaixo podem ser removidas, inclusive o comentário logo acima deles.
+                                funções abaixo dela podem ser removidas, inclusive o comentário logo acima dessas
+                                funções.
                             </p>
                         </li>
                         <li class="item">
                             <p>
-                                Após isso o Código possivelmente pode dar um sinal de erro.
+                                Após esse feito, o Código possivelmente dará um sinal de erro.
                                 Isso acontece devido a linha 8 onde está escrito:
                             </p>
                             <pre style="white-space: normal;">
@@ -97,7 +109,7 @@
                                     contract nomeDaSuaMoeda is ERC721, ERC721URIStorage, Ownable
                                 </code>
                             </pre>
-                            <p>peço então que você altere apague "ERC721," deixando apenas:</p>
+                            <p>peço então que, para resolver esse problema, você apague "ERC721," deixando apenas:</p>
                             <pre style="white-space: normal;">
                                 <code style="color: green; white-space: normal;">
                                     contract nomeDaSuaMoeda is ERC721URIStorage, Ownable
@@ -105,7 +117,7 @@
                             </pre>
                             </p>
                             <div style="width: 100%; margin: 10px 0;">
-                                <h5>Deixando o Código similar a esse:</h5>
+                                <h5>O resultado final do Código possivelmente ficará similar a esse:</h5>
                                 <pre><code>
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
@@ -123,7 +135,7 @@ contract suaMoeda is ERC721URIStorage, Ownable {
 }
                                 </code></pre>
                             </div>
-                            <p>Agora pronto! Contrato 100% feito, vamos para os deploys e transações!</p>
+                            <p>E pronto! Contrato está 100% feito. Vamos agora para os deploys e transações!</p>
                         </li>
                     </ol>
 
@@ -131,41 +143,40 @@ contract suaMoeda is ERC721URIStorage, Ownable {
             </div>
 
             <div class="step">
-                <h2>3° Passo:<br>- Deploy (Remix) -</h2>
+                <h2>3° Passo:<br>
+                    <i class="fa-brands fa-connectdevelop"></i>
+                    Deploy (Remix)
+                    <i class="fa-brands fa-connectdevelop"></i>
+                </h2>
                 <p>Agora nós vamos Copilar o código para ver se ele está em seu total funcionamento.</p>
                 <div class="content">
                     <ol class="lista">
                         <li>
                             <p> Para fazer isso, basta ir no canto superior esquerdo onde há diversos setores com
                                 diferentes funcionalidades.
-                                Você deve clicar no ícone do <span>"Solidity Compiler"</span>, logo abaixo do ícone de
-                                Lupa, depois aperte o botão azul de copilar.
-                                Caso tenha dado errado, reveja os itens anteriores.</p>
+                                Você deve clicar no ícone do <span>"Solidity Compiler"</span>, que se localiza logo
+                                abaixo do ícone de Lupa, depois aperte o botão azul para copilar.
+                                Caso tenha dado errado, revise os itens anteriores.</p>
                         </li>
                         <li>
-                            <p>Após a copilação bem-sucedida, clique no ícone de <span>Deploy</span>, logo abaixo do de
-                                copilação.</p>
+                            <p>Após a copilação bem-sucedida, clique no ícone de <span>Deploy</span>, onde se localiza
+                                logo abaixo do icon de copilação.</p>
                         </li>
                         <li>
-                            <p>na opção <span>"ENVIRONMENT"</span>, escolha a opção MetaMask que irá direcionar a sua
+                            <p>No input <span>"ENVIRONMENT"</span>, escolha a opção MetaMask que irá direcionar a sua
                                 carteira.
                                 Caso essa opção não apareça, possivelmente é porque seu Navegador não está conectado a
-                                sua
-                                Metamask.</p>
+                                sua Metamask.</p>
                         </li>
                         <li>
                             <p>Nas aréas <span>"ACCOUNT"</span>, <span>"GAS LIMIT"</span> e <span>"VALUE"</span> não
                                 precisa alterar nada, apenas certifique-se de que em
-                                <span>"ACCOUNT"</span> é o endereço da sua carteira.
+                                <span>"ACCOUNT"</span> está o endereço da sua carteira.
                             </p>
                         </li>
                         <li>
                             <p>Na área de <span>"CONTRACT"</span>, certifique-se de que está selecionado o contrato com
-                                o
-                                nome do seu
-                                NFT.
-                                Caso não,
-                                selecione essa opção.</p>
+                                o nome do seu NFT. Caso não, selecione essa opção.</p>
                         </li>
                         <li>
                             <p>Feito tudo isso, pronto!<br>
@@ -184,25 +195,27 @@ contract suaMoeda is ERC721URIStorage, Ownable {
             </div>
 
             <div class="step">
-                <h2>4° Passo:<br>- safeMint-</h2>
+                <h2>4° Passo:<br>
+                    <i class="fa-brands fa-connectdevelop"></i>
+                    safeMint (REMIX)
+                    <i class="fa-brands fa-connectdevelop"></i>
+                </h2>
                 <div class="content">
                     <ol class="lista">
                         <li>
                             <p>Feito o deploy, logo abaixo seu endereço do contrato é gerado. Vá até ele e abra-o
-                                clicando
-                                na
-                                seta ao lado.</p>
+                                clicando na setinha.</p>
                         </li>
                         <li>
                             <p>Você encontrará diversas caixas com dados diversos, porém vamos buscar somente uma
                                 chamada
                                 <span>"SafeMint"</span> que é
-                                onde poderemos mintar de fato nossa nova NFT. Abra ela pela seta ao lado.
+                                onde poderemos 'mintar' de fato nossa nova NFT. Abra ela pela seta ao lado.
                             </p>
                         </li>
                         <li>
-                            <p>Ao abrir, você encontrará 3 opções chamadas <span>"to"</span>, <span>"idToken"</span> e
-                                <span>"uri"</span>
+                            <p>Ao abrir, você encontrará 3 opções chamadas <span>"to"</span>, <span>"tokenId"</span>
+                                e <span>"uri"</span>.
                             </p>
                         </li>
                         <li>
@@ -214,13 +227,11 @@ contract suaMoeda is ERC721URIStorage, Ownable {
                                 Recomendo o número 1, por enquanto.</p>
                         </li>
                         <li>
-                            <p>Já no <span>"uri"</span> possui uma condição especial. Você deve gerar um ipfs de um
-                                JSON
-                                com as
-                                informações
-                                que a NFT irá ter que, no caso, são o nome da NFT, descrição e, é claro, uma imagem.
-                                Portanto,
-                                antes de botarmos nosso ipfs aqui, vamos fazer o JSON e o próprio IPFS antes?</p>
+                            <p>Já no <span>"uri"</span> possui uma condição especial. Você deve gerar um IPFS de um
+                                JSON com as informações que a NFT irá ter, como o nome, descrição e,
+                                é claro, a imagem da NFT. Portanto, antes de botarmos nosso IPFS aqui, vamos fazer o
+                                JSON e o próprio IPFS antes?
+                            </p>
                         </li>
                         <li>
                             <p>Voltaremos nessa parte em breve quando o JSON estiver pronto.</p>
@@ -231,7 +242,11 @@ contract suaMoeda is ERC721URIStorage, Ownable {
             </div>
 
             <div class="step">
-                <h2>5° Passo:<br>- JSON -</h2>
+                <h2>5° Passo:<br>
+                    <i class="fa-brands fa-connectdevelop"></i>
+                    JSON
+                    <i class="fa-brands fa-connectdevelop"></i>
+                </h2>
                 <p>Se precisamos de um JSON, vamos fazer um JSON!</p>
                 <div class="content">
                     <ol class="lista">
@@ -241,7 +256,7 @@ contract suaMoeda is ERC721URIStorage, Ownable {
                         <li>
                             <p>Crie um Dicionário com as chaves <span>"name"</span>, <span>"description"</span> e
                                 <span>"image"</span>
-                            </p>.
+                            </p>
                         </li>
                         <li>
                             <p>O valor de <span>"name"</span> e <span>"description"</span> é da sua preferencia, já que
@@ -272,16 +287,23 @@ contract suaMoeda is ERC721URIStorage, Ownable {
             </div>
 
             <div class="step">
-                <h2>6° Passo:<br>- PINATA -</h2>
+                <h2>6° Passo:<br>
+                    <i class="fa-brands fa-connectdevelop"></i>
+                    PINATA
+                    <i class="fa-brands fa-connectdevelop"></i>
+                </h2>
+                <p>Para conseguirmos o JSON, precisamos gerar um endereco <span>CID</span> antes. Pra isso, utilizaremos
+                    o site Pinata.</p>
                 <div class="content">
                     <ol class="lista">
                         <li>
-                            <p>Entre no site <a href=" #" target="_blank">Pinata.com</a></p>
+                            <p>Entre no site <a href="https://www.pinata.cloud" target="_blank">Pinata.com</a></p>
                         </li>
                         <li>
                             <p>Após fazer seu Login, entrará na página principal. Nela você verá um botão no canto
-                                superior
-                                direito chamado <span>"Add Files"</span> e selecione a opção <span>"File"</span>.</p>
+                                superior direito chamado <span>"Add Files"</span>. Clique e selecione a opção
+                                <span>"File"</span>.
+                            </p>
                             <img src="img/add-pinata.png" alt="">
                         </li>
                         <li>
@@ -292,41 +314,48 @@ contract suaMoeda is ERC721URIStorage, Ownable {
                             <img src="img/CID.png" alt="">
                         </li>
                         <li>
-                            <p>Esse CID gerado, nada mais é o que precisamos para gerar fazer nosso IPFS, que é
-                                basicamente
-                                um
-                                protocolo assim como o famoso HTTP.</p>
+                            <p>Esse CID gerado, nada mais é do que o precisamos para gerar fazer nosso IPFS <br>(IPFS é
+                                basicamente um protocolo assim como o famoso HTTP. Caso queira saber mais sobre, veja
+                                esse
+                                <a href="https://youtu.be/yhbnSMTyGDk" target="_blank">vídeo</a>)
+                            </p>
                         </li>
                         <li>
                             <p>A estrutura para gerar o IPFS é bem simples:</p>
                             <code>ipfs://insira_seu_CID_aqui</code>
                         </li>
                         <li>
-                            <p>Faça isso e pronto! Nosso IPFS da imagem está gerado. Lembra o que vamos fazer com isso?
-                                Vamos
-                                colocá-lo no <span>JSON</span> que estávamos montando na chave <span>"image"</span>.</p>
+                            <p>Faça isso e pronto! Nosso IPFS da imagem está gerado. Agora vamos ao nosso aquivo
+                                <span>JSON</span> que estávamos montando anteriormente para completa-lo.
+                            </p>
                         </li>
                     </ol>
                 </div>
             </div>
 
             <div class="step">
-                <h2>7° Passo:<br>- Finalização do JSON e seu IPFS -</h2>
+                <h2>7° Passo:<br>
+                    <i class="fa-brands fa-connectdevelop"></i>
+                    Finalização do JSON e seu IPFS
+                    <i class="fa-brands fa-connectdevelop"></i>
+                </h2>
+
                 <div class="content">
                     <ol class="lista">
                         <li>
-                            <p>Agora que você tem seu IPFS da imagem, insira na chave <span>"image"</span> em seu JSON.
-                            </p>
+                            <p>Retorne ao JSON</p>
+                        </li>
+                        <li>
+                            <p>Na chave <span>"image"</span> ao qual se encontra vazia, deve ser inserido o IPFS da
+                                imagem que você criou no Pinata.</p>
+                            <p>Feito isso, seu JSON está completo!</p>
                         </li>
                         <li>
                             <p>Salve seu arquivo JSON (ctrl + S).</p>
                         </li>
                         <li>
                             <p>Retorne ao Pinata e gere um novo IPFS, só que dessa vez faça especificamente desse
-                                arquivo
-                                JSON
-                                que
-                                você criou, assim como você fez com a imagem.</p>
+                                arquivo JSON que você criou, assim como você fez com a imagem.</p>
                         </li>
                         <li>
                             <p>O CID do JSON agora foi gerado, basta colocar o protocolo IPFS conforme prescrito no
@@ -338,7 +367,11 @@ contract suaMoeda is ERC721URIStorage, Ownable {
             </div>
 
             <div class="step">
-                <h2>8° Passo:<br>- Finalize a NFT -</h2>
+                <h2>8° Passo:<br>
+                    <i class="fa-brands fa-connectdevelop"></i>
+                    Finalize a NFT
+                    <i class="fa-brands fa-connectdevelop"></i>
+                </h2>
                 <div class="content">
                     <ol class="lista">
                         <li>
@@ -346,15 +379,13 @@ contract suaMoeda is ERC721URIStorage, Ownable {
                         </li>
                         <li>
                             <p>Lembra daquele input chamado <span>"uri"</span>? Bem, é ai que você vai inserir o IPFS do
-                                seu JSON que
-                                acabou
-                                de criar.</p>
+                                seu JSON que acabou de criar.</p>
                         </li>
                         <li>
                             <p>Após isso, clique em <span>"Transact"</span>.</p>
                         </li>
                         <li>
-                            </p>Permita o pagamento para mintar e pronto!</p>
+                            <p>Permita o pagamento para mintar e pronto!</p>
                         </li>
                         <li>
                             <p>Sua NFT foi criada!<br>
@@ -369,7 +400,11 @@ contract suaMoeda is ERC721URIStorage, Ownable {
             </div>
 
             <div class="step">
-                <h2>9° Passo:<br>- Coleção NFT -</h2>
+                <h2>9° Passo:<br>
+                    <i class="fa-brands fa-connectdevelop"></i>
+                    Coleção NFT
+                    <i class="fa-brands fa-connectdevelop"></i>
+                </h2>
                 <p>Mas não viemos aqui gerar uma NFT, queremos uma coleção!</p>
                 <p>Relaxa que para criar uma coleção é bem fácil agora.</p>
                 <div class="content">
@@ -403,6 +438,8 @@ contract suaMoeda is ERC721URIStorage, Ownable {
                         </li>
                     </ol>
                 </div>
+                <h4>E tá aí minha coleção de Abelhinhas. Conseguiu fazer a sua?</h4>
+                <img src="img/abelha.png" alt="" class="img">
             </div>
         </section>
     </main>

@@ -26,8 +26,6 @@ body {
     color: white;
     text-shadow:
         0 0 5px white,
-        0 0 10px white,
-
         0 0 10px black,
         0 0 10px blue,
         0 0 20px green;
@@ -43,12 +41,18 @@ body {
 }
 
 .banner h4 {
-    color: #111;
+    color: #222;
 }
 
 .banner p {
     font-weight: 600;
     margin: 1rem 0;
+}
+
+.fa-whatsapp {
+    margin-right: 9px;
+    font-size: 18px;
+
 }
 
 .banner img {
@@ -59,11 +63,12 @@ body {
 .banner a {
     display: inline-block;
     text-decoration: none;
-    color: #111;
+    color: green;
     font-weight: 800;
-    margin-top: 1px;
+    margin-top: 5px;
     padding: 10px 20px;
-    background-color: green;
+    text-shadow: none;
+    background-color: rgb(0, 3, 62);
     box-shadow: 0 0 3px green;
     border-radius: 100px;
     border: 1px solid black;
@@ -80,7 +85,6 @@ body {
         transform: translateY(-20px);
     }
 }
-
 
 .step {
     padding: 1rem 1.5rem;
@@ -133,6 +137,7 @@ body {
 
 .content>img {
     max-width: 25%;
+    border-radius: 8px;
 }
 
 .lista {
@@ -173,6 +178,10 @@ footer {
     text-align: center;
 }
 
+.img {
+    max-width: 100%;
+}
+
 @media screen and (max-width: 427px) {
     .banner {
         padding: 1rem;
@@ -188,7 +197,6 @@ footer {
     }
 
     .banner a {
-        margin-top: 10px;
         padding: 10px 30px;
     }
 
